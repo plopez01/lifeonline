@@ -1,7 +1,11 @@
-function setup() {
-  createCanvas(400, 400);
-}
+let myp5 = new p5(( s ) => {
 
-function draw() {
-  background(220);
-}
+    s.setup = () => {
+        s.createCanvas(s.windowWidth, s.windowHeight);
+    };
+
+    s.draw = () => {
+        s.background(0);
+    };
+
+}, document.getElementById('p5sketch'));
